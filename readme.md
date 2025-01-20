@@ -1,70 +1,63 @@
-iOS Obfuscation Tool
+# iOS Obfuscation Tool
 
-The iOS Obfuscation Tool is designed to provide code obfuscation for iOS projects by renaming source files and classes based on a user-defined configuration. It helps safeguard your source code by making it harder to reverse-engineer. The tool is currently under development, and contributions are welcome!
+The **iOS Obfuscation Tool** is designed to provide code obfuscation for iOS projects by renaming source files and classes based on a user-defined configuration. It helps safeguard your source code by making it harder to reverse-engineer. The tool is currently under development, and contributions are welcome!
 
-Features
-• Rename Source Files:
-Uses Python scripts to rename source files based on definitions provided in a configuration file.
-• Custom Class Name Generation:
-Dynamically generates unique class names and assigns them unique obfuscation IDs.
-• Xcode Project Integration:
-Utilizes a Ruby gem to rename classes within the .xcodeproj file for seamless project integration.
-• Objective-C Compatibility:
-Supports obfuscation for Objective-C source code.
-• Open Source and Extensible:
-Open to contributions and improvements to address edge cases and enhance functionality.
+---
 
-Installation 1. Clone the repository:
+## Features
 
-git clone https://github.com/wajahat414/obfuscation-ios.git
-cd ios-obfuscation-tool
+- **Rename Source Files**  
+  Uses Python scripts to rename source files based on definitions provided in a configuration file.
 
-    2.	Install dependencies:
-    •	Python dependencies:
+- **Custom Class Name Generation**  
+  Dynamically generates unique class names and assigns them unique obfuscation IDs.
 
-Use pip to install the required Python libraries.
+- **Xcode Project Integration**  
+  Utilizes a Ruby gem to rename classes within the `.xcodeproj` file for seamless project integration.
 
-pip install -r requirements.txt
+- **Objective-C Compatibility**  
+  Supports obfuscation for Objective-C source code.
 
-    •	Ruby gem:
+- **Open Source and Extensible**  
+  Open to contributions and improvements to address edge cases and enhance functionality.
 
-Ensure Ruby is installed and run:
+---
 
-Define your source file mapping and obfuscation rules in the provided configuration file (e.g., config.json).
+## Installation
 
-Usage 1. Run the Python script to rename source files:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/wajahat414/obfuscation-ios.git
+   cd obfuscation-ios
 
-python generate_class_names.py
+2. **Install dependencies::**
+   ```bash
+   pip install -r requirements.txt
 
-    2.	python getSystemClasses.py
+3. **Set up your configuration file::**
+  Define your source file mapping and obfuscation rules in the provided configuration file
 
-python core/main.py
 
-    3.	Renames the file generated with a mapping file
+## Usage
 
-ruby rename_classes.rb
+1. **python generate_class_names.py:**
+   ```bash
+   python generate_class_names.py
+   python getSystemClasses.py
+2. **Run the main obfuscation script:**
+   ```bash
+   python core/main.py
 
-    4.	Build and test your project:
+## Current Limitations
+	•	Some edge cases are yet to be resolved, particularly with specific Objective-C constructs.
+	•	Limited support for Swift source files (planned for future releases).
+	•	The tool is still in development, and stability may vary.
 
-Open your project in Xcode to ensure everything works as expected.
+## Contributing
 
-Current Limitations
-• Some edge cases are yet to be resolved, particularly with specific Objective-C constructs.
-• Limited support for Swift source files (planned for future releases).
-• The tool is still in development, and stability may vary.
+We welcome contributions! Feel free to:
+	1.	Report issues and bugs.
+	2.	Submit pull requests with improvements.
+	3.	Suggest new features or enhancements.
 
-Contributing
-
-We welcome contributions! Feel free to: 1. Report issues and bugs. 2. Submit pull requests with improvements. 3. Suggest new features or enhancements.
-
-To contribute, fork the repository, make your changes, and create a pull request. See CONTRIBUTING.md for detailed guidelines.
-
-License
-
-This project is licensed under the MIT License.
-
-Support
-
-For any questions, issues, or suggestions, please open an issue in this repository.
-
-Let me know if you’d like to refine or customize it further!
+To contribute, fork the repository, make your changes, and create a pull request.
